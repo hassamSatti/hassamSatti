@@ -1,0 +1,15 @@
+Save the date from jquery bracket json request...
+
+$json = file_get_contents('php://input'); $data = json_decode($json);
+
+$sql = "INSERT into table_name SET teams='".serialize($data->teams)."',result='".serialize($data->results)."'";
+
+Get the data of bracket from database
+
+"SELECT * from table_name";
+
+$teams=unserialize($resultr['teams']); $result=unserialize($resultr['result']);
+
+Populate in the jquery bracket data...
+
+var saveData = { teams : echo json_encode($teams); , results : echo json_encode($result); };
